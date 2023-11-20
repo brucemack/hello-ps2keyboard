@@ -145,9 +145,10 @@ static KeyMap Map[] = {
     { 0x0041, ',', '<' },
     { 0x0049, '.', '>' },
     { 0x004a, '/', '?' },
+    { 0x0029, ' ', ' ' },
 };
 
-static uint16_t MapSize = 46;
+static uint16_t MapSize = 47;
 
 char keyboard_code_to_ascii(uint16_t scanCode, bool isShift) {
     for (uint16_t i = 0; i < MapSize; i++) {
