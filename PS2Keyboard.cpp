@@ -75,10 +75,10 @@ void keyboard_clock_callback(uint gpio, uint32_t event_mask) {
                 }
                 // Regular key
                 else {
-                    printf("KBD: %d %02x %d %d %d %d\n", keyCount, bitAccumulator, 
-                        (int)inExtended,
-                        (int)shiftState, (int)ctlState, (int)altState);
-                    _listener->onKey();
+                    //printf("KBD: %d %02x %d %d %d %d\n", keyCount, bitAccumulator, 
+                    //    (int)inExtended,
+                    //    (int)shiftState, (int)ctlState, (int)altState);
+                    _listener->onKeyDown(bitAccumulator, inExtended, shiftState, ctlState, altState);
                 }
             }
             lastKeyUp = false;
