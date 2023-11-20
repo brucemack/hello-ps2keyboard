@@ -34,6 +34,7 @@ char keyboard_code_to_ascii(uint16_t scanCode, bool isShift);
 
 // Some keycodes
 #define PS2_SCAN_ENTER (0x005a)
+#define PS2_SCAN_ESC (0x0076)
 #define PS2_SCAN_F1 (0x0005)
 #define PS2_SCAN_F2 (0x0006)
 #define PS2_SCAN_F3 (0x0004)
