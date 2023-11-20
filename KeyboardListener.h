@@ -24,7 +24,7 @@ Tom Roberts, and Malcolm Slaney (malcolm@interval.com).
 class KeyboardListener {
 public:
 
-    virtual void onKeyDown(uint8_t scanCode, bool isExtended, 
+    virtual void onKeyDown(uint16_t scanCode, 
         bool isShift, bool isCtl, bool isAlt);
 };
 

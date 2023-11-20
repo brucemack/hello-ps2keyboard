@@ -39,11 +39,14 @@ class Listener : public KeyboardListener {
 public:
 
 
-    virtual void onKeyDown(uint8_t scanCode, bool isExtended, 
+    virtual void onKeyDown(uint16_t scanCode, 
         bool isShift, bool isCtl, bool isAlt) { 
-    printf("KBD: %02x %d %d %d %d\n", (int)scanCode, 
-        (int)isExtended,
-        (int)isShift, (int)isCtl, (int)isAlt);
+        char c = keyboard_code_to_ascii(scanCode, isShift);
+        if (c)
+            printf("CHAR %c %d %d\n", c, (int)isCtl, (int)isAlt);
+        else
+            printf("SCAN: %04x %d %d %d\n", (int)scanCode, 
+                (int)isShift, (int)isCtl, (int)isAlt);
     }
 };
 
