@@ -38,7 +38,13 @@ const uint KBD_CLOCK_PIN = 3;
 class Listener : public KeyboardListener {
 public:
 
-    void onKey() { };
+
+    virtual void onKeyDown(uint8_t scanCode, bool isExtended, 
+        bool isShift, bool isCtl, bool isAlt) { 
+    printf("KBD: %02x %d %d %d %d\n", (int)scanCode, 
+        (int)isExtended,
+        (int)isShift, (int)isCtl, (int)isAlt);
+    }
 };
 
 int main() {
